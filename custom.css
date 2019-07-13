@@ -2,8 +2,11 @@
 	position: fixed;
 	bottom: 100px;
 	left: 20px;
-	background: red;
-	width: 200px;
+	background: #fafafa;
 	height: 60px;
+	border-radius: 4px;
+	box-shadow: 3px 1px #fafafa;
+	border: 1px solid #ebebeb;
+	
 	
 }
