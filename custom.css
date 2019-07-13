@@ -7,6 +7,32 @@
 	border-radius: 4px;
 	box-shadow: 3px 1px #fafafa;
 	border: 1px solid #ebebeb;
-	
-	
+}
+
+.nav-tabs {
+  border-bottom: transparent;
+  border-top: 1px solid #dddddd;
+}
+.nav-tabs > li {
+  float: left;
+  margin-bottom: -1px;
+}
+.nav-tabs > li > a {
+  margin-right: 2px;
+  line-height: 1.42857143;
+  border: 1px solid transparent;
+  border-radius: 0 0 4px 4px;
+}
+.nav-tabs > li > a:hover {
+  border-color: #eeeeee #eeeeee #dddddd;
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  color: #555555;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-top-color: transparent;
+  cursor: default;
+  margin:-1px;
 }
