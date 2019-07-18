@@ -49,8 +49,8 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <div class="tooltip">
-        <button type="button" class="btn btn-primary" onclick="myFunction()" onmouseout="outFunc()">
+        <div class="tooltip" id="json-data-tooltip">
+        <button type="button" class="btn btn-primary" onclick="copyToClipboard('json-data-text','json-data-tooltip')" onmouseout="outFunc()">
 			<span class="tooltiptext" id="myTooltip">Copy to clipboard</span>	
         	Copy
     	</button>
@@ -63,12 +63,12 @@
 </div>
 
 <script type="text/javascript">
-	function myFunction() {
-  var copyText = document.getElementById("myInput");
+	function copyToClipboard(txtID,tooltipID) {
+  var copyText = document.getElementById(txtID);
   copyText.select();
   document.execCommand("copy");
   
-  var tooltip = document.getElementById("myTooltip");
+  var tooltip = document.getElementById(tooltipID);
   tooltip.innerHTML = "Copied: " + copyText.value;
 }
 
