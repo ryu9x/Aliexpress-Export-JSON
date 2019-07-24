@@ -63,7 +63,15 @@
 </div>
 
 <script type="text/javascript">
-	function copyToClipboard(txtID,tooltipID) {
+
+$(document).ready(function(){
+	init();
+});
+
+function init(){
+	$("#json-data-text").val(window.runParams.data);
+}
+function copyToClipboard(txtID,tooltipID) {
   var copyText = document.getElementById(txtID);
   copyText.select();
   document.execCommand("copy");
