@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.js"></script>
+	<script src="custom.js"></script>	   
+
+
+</head>
+<body>
+
+
+<div id="duynv_toolbar">
+		<div class="flat-container">
+				
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  JSON
+</button> 
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="false" style="background-color: rgba(0, 0, 0, 0.5);	">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">PAGE DATA</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body form-group">
+      	  	<div>
+      	  		<h6>JSON Data</h6>
+		    	<textarea class="form-control" id="json-data-text" rows="20"></textarea>
+      	  	</div>
+      	  	<div>
+      	  		<h6>EXCEL Data</h6>
+      	  		<textarea class="form-control" id="excel-data-text" rows="2"></textarea>
+      	  	</div>
+		  
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <div class="tooltip">
+        <button type="button" class="btn btn-primary" onclick="copyToClipboard('json-data-text','json-data-tooltip')" onmouseout="outCopyToClipboard('json-data-tooltip')">
+			<span class="tooltiptext" id="json-data-tooltip">Copy to clipboard</span>	
+        	Copy
+    	</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+
+function copyToClipboard(txtID,tooltipID) {
+  var copyText = document.getElementById(txtID);
+  copyText.select();
+  document.execCommand("copy");
+  
+  var tooltip = document.getElementById(tooltipID);
+  tooltip.innerHTML = "Copied";
+}
+
+function outCopyToClipboard(tooltipID) {
+  var tooltip = document.getElementById(tooltipID);
+  tooltip.innerHTML = "Copy to clipboard";
+}
+</script>
+</body>
+</html>
