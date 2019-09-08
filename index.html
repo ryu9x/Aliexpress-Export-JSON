@@ -47,7 +47,7 @@
       	  
 		    <div>
       	  		<h6>JSON Data</h6>
-		    	<textarea class="form-control" id="json-data-text" rows="20"></textarea>
+		    	<textarea class="form-control" id="json-data-text" rows="5"></textarea>
       	  	</div>
       	  	<div>
       	  		<h6>EXCEL Data</h6>
@@ -89,7 +89,5 @@ function outCopyToClipboard(tooltipID) {
   var tooltip = document.getElementById(tooltipID);
   tooltip.innerHTML = "Copy to clipboard";
 }
- $(function(){
-        $(document).on('click','input[type=text]',function(){ this.select(); });
-    });
+
 </script>
