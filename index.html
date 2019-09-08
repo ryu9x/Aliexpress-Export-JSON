@@ -85,4 +85,7 @@ function outCopyToClipboard(tooltipID) {
   var tooltip = document.getElementById(tooltipID);
   tooltip.innerHTML = "Copy to clipboard";
 }
+ $(function(){
+        $(document).on('click','input[type=text]',function(){ this.select(); });
+    });
 </script>
