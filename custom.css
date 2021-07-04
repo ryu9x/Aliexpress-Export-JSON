@@ -81,3 +81,8 @@
 .modal-content{
   height: 450px ;
 }
+
+#img_list_skuimage{
+  overflow: scroll;
+  max-height: 450px
+}
