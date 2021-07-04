@@ -1,72 +1,60 @@
 
 <div id="duynv_toolbar">
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  JSON
+</button> 
 
-
-<!--TAB-->
-<div class="flat-container">
-		<div class="tab-content" id="pills-tabContent">
-			<div class="tab-pane fade" id="pills-json" role="tabpanel" aria-labelledby="pills-json-tab">
-				<fieldset>
-					<div class="form-group">
-						<div class="col-xs-12">
-							<label for="json-data">JSON data</label>
-						</div>
-					</div>
-				</fieldset>
-			</div>
-			<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">IMAGE</div>
-			<div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
-		</div>		
-		<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-			<li class="nav-item">
-				<!-- Button trigger modal -->
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-			  JSON
-			</button> 
-			</li>
-			<li class="nav-item">
-			<a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</a>
-			</li>
-			<li class="nav-item">
-			<a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</a>
-			</li>
-		</ul>
-</div>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="false" style="background-color: rgba(0, 0, 0, 0.5);	">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">PAGE DATA</h5>
+        <!-- <h5 class="modal-title" id="exampleModalLongTitle">PAGE DATA</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
+         -->
+         <ul class="nav nav-tabs" id="myTab" role="tablist">
+		  <li class="nav-item">
+		    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">JSON</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Image</a>
+		  </li>
+		</ul>
       </div>
       <div class="modal-body form-group">
-      	  
-		    <div>
+      	<div class="tab-content" id="myTabContent">
+		  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+		  	<div>
       	  		<h6>JSON Data</h6>
 		    	<textarea class="form-control" id="json-data-text" rows="5"></textarea>
       	  	</div>
       	  	<div>
       	  		<h6>EXCEL Data</h6>
       	  		<textarea class="form-control" id="excel-data-text" rows="2"></textarea>
+      	  	</div>	
+      	  	<div>
+      	  		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		        <button type="button" class="btn btn-primary" id="btnRefresh">Refresh Data</button>
+		        <div class="tooltip">
+		        <button type="button" class="btn btn-primary" onclick="copyToClipboard('json-data-text','json-data-tooltip')" onmouseout="outCopyToClipboard('json-data-tooltip')">
+					<span class="tooltiptext" id="json-data-tooltip">Copy to clipboard</span>	
+		        	Copy JSON
+		    	</button>
+		    	<button type="button" class="btn btn-primary" onclick="copyToClipboard('excel-data-text','excel-data-tooltip')" onmouseout="outCopyToClipboard('excel-data-tooltip')">
+					<span class="tooltiptext" id="excel-data-tooltip">Copy to clipboard</span>	
+		        	Copy Excel
+		    	</button>
       	  	</div>
-		  
+		  </div>
+		  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+		</div>  
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" id="btnRefresh">Refresh Data</button>
-        <div class="tooltip">
-        <button type="button" class="btn btn-primary" onclick="copyToClipboard('json-data-text','json-data-tooltip')" onmouseout="outCopyToClipboard('json-data-tooltip')">
-			<span class="tooltiptext" id="json-data-tooltip">Copy to clipboard</span>	
-        	Copy JSON
-    	</button>
-    	<button type="button" class="btn btn-primary" onclick="copyToClipboard('excel-data-text','excel-data-tooltip')" onmouseout="outCopyToClipboard('excel-data-tooltip')">
-			<span class="tooltiptext" id="excel-data-tooltip">Copy to clipboard</span>	
-        	Copy Excel
-    	</button>
+        --==**==--
         </div>
       </div>
     </div>
